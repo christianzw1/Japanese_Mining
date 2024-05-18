@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #181818;
+    color: #ffffff;
+}
+
+.main-content {
+    display: flex;
+    margin-top: 20px; /* Ajustar conforme necessário para o layout */
+}
+
+.video-section {
+    flex: 3;
+    padding: 20px;
+    background-color: #181818;
+    position: relative;
+}
+
+.video-player {
+    width: 100%;
+    background-color: #000;
+    position: relative;
+}
+
+.video-info h1 {
+    margin: 20px 0 10px;
+    color: white;
+}
+
+input[type="file"] {
+    display: block;
+    margin-top: 10px;
+}
+
+.subtitle-browser {
+    flex: 1;
+    padding: 20px;
+    background-color: #202020;
+    color: white;
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+}
+
+.subtitle-list {
+    margin-bottom: 20px;
+}
+
+.subtitle-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #303030;
+    cursor: pointer;
+    border-radius: 4px;
+    position: relative;
+}
+
+.subtitle-item:hover, .subtitle-item.selected {
+    background-color: #505050;
+}
+
+.subtitle-item.current::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.copy-button {
+    padding: 5px 10px;
+    background-color: #ff0000;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.custom-subtitles {
+    position: absolute;
+    bottom: 5%; /* Ajuste para manter a legenda dentro do vídeo */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 24px; /* Aumenta o tamanho do texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75); /* Adiciona uma sombra ao texto */
+    pointer-events: auto; /* Permite a seleção de texto */
+    background: rgba(0, 0, 0, 0.5); /* Adiciona um fundo semi-transparente para maior visibilidade */
+}
